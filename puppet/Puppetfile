@@ -1,0 +1,9 @@
+forge "https://forge.puppet.com"
+
+metadata
+
+#mod 'ubuntudesktop', :path => './'
+
+# redeclare virtualbox module
+# git MASTER has a fix for Xenial/Jessie APT-KEY error, but hasn't been published on forge.puppet.com
+mod 'danzilio-virtualbox', :git => 'https://github.com/danzilio/danzilio-virtualbox.git'

@@ -1,0 +1,4 @@
+# Librarian Puppet working files
+.librarian
+.tmp
+modules

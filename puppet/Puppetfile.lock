@@ -1,0 +1,42 @@
+FORGE
+  remote: https://forge.puppet.com
+  specs:
+    edestecd-software (1.0.2)
+      puppetlabs-apt (< 3.0.0, >= 2.1.1)
+      puppetlabs-stdlib (< 5.0.0, >= 4.2.0)
+    gini-archive (0.2.1)
+    gini-idea (0.3.0)
+      gini-archive (>= 0.1.0)
+    puppet-nodejs (2.0.1)
+      puppetlabs-stdlib (< 5.0.0, >= 4.1.0)
+      treydock-gpg_key (< 1.0.0, >= 0.0.3)
+    puppetlabs-apt (2.2.2)
+      puppetlabs-stdlib (< 5.0.0, >= 4.5.0)
+    puppetlabs-stdlib (4.12.0)
+    rcoleman-dropbox (0.1.0)
+    stahnma-epel (1.2.2)
+      puppetlabs-stdlib (>= 3.0.0)
+    treydock-gpg_key (0.0.3)
+    unibet-vagrant (0.2.1)
+      puppetlabs-stdlib (>= 0.0.0)
+
+GIT
+  remote: https://github.com/danzilio/danzilio-virtualbox.git
+  ref: master
+  sha: 0c2a63e560ce0f1deb538e5288cffd5267b08651
+  specs:
+    danzilio-virtualbox (1.7.1)
+      puppetlabs-apt (< 3.0.0, >= 2.1.0)
+      puppetlabs-stdlib (< 5.0.0, >= 4.8.0)
+      stahnma-epel (< 2.0.0, >= 0.0.6)
+
+DEPENDENCIES
+  danzilio-virtualbox (>= 0, >= 1.7.0)
+  edestecd-software (>= 0.5.0)
+  gini-idea (>= 0.3.0)
+  puppet-nodejs (>= 1.1.0)
+  puppetlabs-apt (< 3.0.0, >= 1.8.0)
+  puppetlabs-stdlib (< 5.0.0, >= 3.0.0)
+  rcoleman-dropbox (>= 0.1.0)
+  unibet-vagrant (>= 0.2.0)
+
