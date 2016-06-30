@@ -1,4 +1,5 @@
 # Librarian Puppet working files
 .librarian
 .tmp
+Puppetfile.lock
 modules
