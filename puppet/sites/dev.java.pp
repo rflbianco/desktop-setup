@@ -9,8 +9,8 @@ package { 'gradle':
   require => [Apt::Ppa['ppa:cwchien/gradle']]
 }
 
-# Maven from PPA
-apt::ppa { 'ppa:andrei-pozolotin/maven3': }
+# Maven from official repository
+# apt::ppa { 'ppa:andrei-pozolotin/maven3': } # disabled / not updated
 package { 'maven':
   ensure  => 'latest',
   require => [Apt::Ppa['ppa:andrei-pozolotin/maven3']]
