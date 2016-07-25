@@ -7,7 +7,7 @@ package { "chromium-browser": ensure => "installed" }
 include software::browsers::chrome
 
 ##########################################################
-# Opera from PPA
+# Opera from Official DEB repository
 apt::source { 'opera-ppa':
   location   => 'http://deb.opera.com/opera/',
   release    => 'stable',
@@ -19,7 +19,7 @@ apt::key { 'opera-ppa':
   source => 'http://deb.opera.com/archive.key'
 }
 
-package { 'opera':
+package { 'opera-stable':
   ensure  => 'installed',
   require => [
     Apt::Source['opera-ppa'],
