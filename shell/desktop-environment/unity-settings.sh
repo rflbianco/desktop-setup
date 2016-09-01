@@ -1,3 +1,10 @@
+#!/bin/sh
+
+if [ $UID -eq 0 ]; then
+  echo "ERROR. Running as root. This script sets Desktop config, you must run it as a regular user."
+  exit 1
+fi
+
 ### Datetime Indicator
 gsettings set com.canonical.indicator.datetime show-auto-detected-location true
 gsettings set com.canonical.indicator.datetime show-date true
