@@ -1,4 +1,15 @@
 ##########################################################
+# Firefox Aurora (Developers Edition) from official repository
+# Disable due to instability
+# apt::ppa { 'ppa:ubuntu-mozilla-daily/firefox-aurora': }
+# package { 'firefox':
+#   ensure  => 'latest',
+#   require => [Apt::Ppa['ppa:ubuntu-mozilla-daily/firefox-aurora']]
+# }
+
+
+
+##########################################################
 # Chromium from official repository
 package { "chromium-browser": ensure => "installed" }
 
