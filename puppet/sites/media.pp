@@ -16,3 +16,12 @@ package { 'audacious':
 ##########################################################
 # CMus CLI audioplayer from official repository
 package { 'cmus': ensure => 'installed' }
+
+
+##########################################################
+# PuddleTag (Qt-based mp3tag application) from PPA
+apt::ppa { 'ppa:webupd8team/puddletag': }
+package { 'puddletag':
+  ensure  => 'installed',
+  require => [Apt::Ppa['ppa:webupd8team/puddletag']],
+}
