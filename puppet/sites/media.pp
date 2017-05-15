@@ -46,3 +46,5 @@ package { 'spotify-client':
     Apt::Key['spotify-ppa']
   ],
 }
+
+include software::entertainment::vlc
