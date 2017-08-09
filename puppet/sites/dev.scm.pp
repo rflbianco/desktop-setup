@@ -1,3 +1,5 @@
+Exec { path => ['/usr/local/sbin', '/usr/local/bin', '/usr/sbin', '/usr/bin', '/sbin', '/bin' ] }
+
 include apt
 
 ##########################################################
@@ -13,6 +15,17 @@ package { 'tig':
   ensure  => 'latest',
   require => [Apt::Ppa['ppa:aguignard/ppa']]
 }
+
+
+exec { 'git-lfs-apt-source':
+  command => 'curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh | sudo bash',
+  require => [Package['git']]
+}
+package { 'git-lfs':
+  ensure  => installed,
+  require => [Exec['git-lfs-apt-source']]
+}
+
 
 ##########################################################
 # SVN from official repository and Rabbitvcs from PPA
