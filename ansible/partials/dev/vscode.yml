@@ -1,0 +1,35 @@
+---
+- hosts: localhost
+
+  # Install Visual Studio Code editor
+  roles:
+    - role: ../../roles/gantsign.visual-studio-code
+      tags:
+        - gui
+        - editor
+        - vscode
+      users:
+        - username: "{{ username }}"
+          visual_studio_code_extensions:
+            - robertohuertasm.vscode-icons
+            - codezombiech.gitignore
+            - EditorConfig.EditorConfig
+            - bungcip.better-toml
+            - PeterJausovec.vscode-docker
+          visual_studio_code_settings: {
+            "editor.fontFamily": "'Ubuntu Mono', 'monospace', 'Courier New'",
+            "editor.fontSize": 12,
+            "editor.renderWhitespace": "all",
+            "explorer.openEditors.visible": 0,
+            "extensions.ignoreRecommendations": true,
+            "window.menuBarVisibility": "toggle",
+            "window.zoomLevel": 0,
+            "workbench.activityBar.visible": false,
+            "workbench.colorTheme": "One Monokai",
+            "workbench.iconTheme": "vscode-icons",
+            "workbench.sideBar.location": "left",
+            "workbench.startupEditor": "none",
+    
+            "vsicons.presets.tsOfficial": false,
+            "vsicons.dontShowNewVersionMessage": true
+          }

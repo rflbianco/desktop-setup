@@ -1,0 +1,9 @@
+---
+# dev
+- src: gantsign.visual-studio-code
+- src: gantsign.visual-studio-code-extensions
+- src: gantsign.java
+
+# util
+- src: gantsign.terminator
+- src: gantsign.oh-my-zsh

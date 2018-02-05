@@ -1,0 +1,29 @@
+---
+- hosts: localhost
+
+  tasks:
+    # install Git PPA
+    - name: pre-register git ppa
+      become: yes
+      apt_repository:
+        repo: '{{ item }}'
+        update_cache: no
+      with_items:
+        - ppa:git-core/ppa
+        - ppa:aguignard/ppa
+      register: register_repos
+
+    - name: apt-get update
+      become: yes
+      apt:
+        update_cache: yes
+      when: register_repos.changed
+      
+    - name: install git-extras and tig
+      become: yes
+      apt:
+        name: '{{ item }}'
+        state: latest
+      with_items:
+        - git-extras
+        - tig

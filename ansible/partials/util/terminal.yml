@@ -1,0 +1,23 @@
+---
+- hosts: localhost
+
+  roles:
+    # Install Terminator terminal emulator
+    - role: ../../roles/gantsign.terminator
+      tags:
+        - gui
+
+    # Install oh-my-zsh shell enhancements
+    # this role also installs and set zsh as default shell
+    - role: ../../roles/gantsign.oh-my-zsh
+      tags:
+        - oh-my-zsh
+      users:
+        - username: "{{ username }}"
+          oh_my_zsh:
+            theme: maran
+            plugins:
+              - command-not-found
+              - docker
+              - git
+              - mvn

@@ -1,0 +1,6 @@
+---
+- include: partials/dev/java.yml
+- include: partials/dev/vscode.yml
+
+- include: partials/util/terminal.yml
+- include: partials/util/git.yml
