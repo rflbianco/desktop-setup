@@ -1,5 +1,6 @@
 ---
 # dev
+- src: angstwad.docker_ubuntu
 - src: gantsign.visual-studio-code
 - src: gantsign.visual-studio-code-extensions
 - src: gantsign.java

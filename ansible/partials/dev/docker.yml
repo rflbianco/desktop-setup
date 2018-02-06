@@ -1,0 +1,10 @@
+---
+- hosts: localhost
+
+  roles:
+    # Install Docker
+    - role: ../../roles/angstwad.docker_ubuntu
+      tags:
+        - docker
+      docker_group_members:
+        - "{{ username }}"
