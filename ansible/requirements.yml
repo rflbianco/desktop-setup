@@ -7,3 +7,4 @@
 # util
 - src: gantsign.terminator
 - src: gantsign.oh-my-zsh
+- src: wtanaka.dropbox
