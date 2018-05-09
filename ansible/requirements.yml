@@ -4,6 +4,7 @@
 - src: gantsign.visual-studio-code
 - src: gantsign.visual-studio-code-extensions
 - src: gantsign.java
+- src: gantsign.maven
 
 # util
 - src: gantsign.terminator
