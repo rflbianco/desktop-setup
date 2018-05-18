@@ -1,6 +1,7 @@
 ---
 # dev
 - src: angstwad.docker_ubuntu
+- src: gantsign.kubernetes
 - src: gantsign.intellij
 - src: gantsign.visual-studio-code
 - src: gantsign.visual-studio-code-extensions

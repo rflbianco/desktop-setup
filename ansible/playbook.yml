@@ -1,5 +1,6 @@
 ---
 - include: partials/dev/docker.yml
+- include: partials/dev/kubernetes.yml
 - include: partials/dev/intellij.yml
 - include: partials/dev/java.yml
 - include: partials/dev/maven.yml
