@@ -6,6 +6,11 @@
 
   roles:
   - role: ../../roles/gantsign.java
+    java_version: '7'
+    java_fact_group_name: java_7
+    java_is_default_installation: no
+
+  - role: ../../roles/gantsign.java
     java_version: '8'
     java_fact_group_name: java_8
     java_is_default_installation: yes
