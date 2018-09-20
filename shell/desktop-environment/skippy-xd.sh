@@ -17,3 +17,17 @@ cp skippy-xd.sample.rc ~/.config/skippy-xd/skippy-xd.rc
 # replaces personal preferences in config file
 sed -i 's/switchDesktopOnActivate = false/switchDesktopOnActivate = true/g' ~/.config/skippy-xd/skippy-xd.rc
 sed -i 's/showAllDesktops = false/showAllDesktops = true/g' ~/.config/skippy-xd/skippy-xd.rc
+
+# create autostart entry using XDG
+#
+# It requires to add a keyboard shortcut to enable window picker
+# command=skippy-xd --toggle-window-picker
+sudo bash -c 'cat > /etc/xdg/autostart/skippy-xd.desktop' <<EOF
+[Desktop Entry]
+Type=Application
+Name=Skippy XD
+Comment=Exposé-like fullscreen task/application switcher
+Exec=skippy-xd --start-daemon
+Terminal=false
+Type=Application
+EOF
