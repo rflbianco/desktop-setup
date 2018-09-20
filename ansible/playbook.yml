@@ -9,3 +9,5 @@
 - include: partials/util/terminal.yml
 - include: partials/util/git.yml
 - include: partials/util/dropbox.yml
+
+- include: partials/virtualization/virtualbox.yml

@@ -12,3 +12,6 @@
 - src: gantsign.terminator
 - src: gantsign.oh-my-zsh
 - src: wtanaka.dropbox
+
+# virtualization
+- src: wtanaka.virtualbox
